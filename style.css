@@ -289,7 +289,7 @@ body {
   line-height: 1.2;
 }
 
-.about .row .content p::before {
+.about .row .content .misi::before {
   content: "➤ ";
   margin-right: 0.5rem;
 }
@@ -551,6 +551,7 @@ footer {
 
   .contact .row .contact-content2 .whatapp-icon,
   .contact .row .contact-content2 .instagram-icon,
+  .contact .row .contact-content2 .email-icon,
   .contact .row .contact-content2 .map-icon {
     display: flex; /* Memastikan tetap dalam satu baris */
     flex-direction: row; /* Menjaga ikon dan teks dalam baris */
