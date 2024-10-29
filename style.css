@@ -280,6 +280,7 @@ body {
   font-size: 1.2rem;
   font-weight: 200;
   line-height: 1.2;
+  text-align: left;
 }
 
 .about .row .content p {
@@ -320,10 +321,24 @@ body {
 .contact .row .contact-content2 div p {
   display: inline-block;
   align-items: center;
-  gap: 1rem;
   margin: 1.5rem 1rem;
   color: black;
   transition: transform 0.3s ease-in-out;
+}
+
+.contact .row .contact-content2 .whatapp-icon,
+.contact .row .contact-content2 .instagram-icon,
+.contact .row .contact-content2 .email-icon,
+.contact .row .contact-content2 .map-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.contact .row .contact-content2 div .alamat-contact {
+  margin: 0.9rem;
 }
 
 /* button whatapp start */
@@ -444,7 +459,7 @@ footer {
 
 .footer-distribute .footer-center {
   width: 35%;
-  text-align: left;
+  text-align: justify;
 }
 
 .footer-distribute .footer-center .alamat {
@@ -463,7 +478,7 @@ footer {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  text-align: left;
+  text-align: justify;
   line-height: 42px;
   margin: 10px 15px;
   vertical-align: top;
@@ -543,21 +558,11 @@ footer {
 }
 
 /* media queries */
+
 /* laptop */
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
-  }
-
-  .contact .row .contact-content2 .whatapp-icon,
-  .contact .row .contact-content2 .instagram-icon,
-  .contact .row .contact-content2 .email-icon,
-  .contact .row .contact-content2 .map-icon {
-    display: flex; /* Memastikan tetap dalam satu baris */
-    flex-direction: row; /* Menjaga ikon dan teks dalam baris */
-    align-items: center; /* Menjaga teks tetap sejajar dengan ikon */
-    gap: 5px; /* Mengurangi jarak antar elemen jika diperlukan */
-    text-align: left; /* Memastikan teks tetap rata kiri */
   }
 
   footer {
