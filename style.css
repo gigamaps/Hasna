@@ -337,8 +337,9 @@ body {
   text-align: left;
 }
 
-.contact .row .contact-content2 div .alamat-contact {
+.contact .row .contact-content2 .map-icon .alamat-contact {
   margin: 0.9rem;
+  text-align: justify;
 }
 
 /* button whatapp start */
