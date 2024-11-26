@@ -5,6 +5,7 @@
   outline: none;
   border: none;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -161,19 +162,19 @@ body {
   max-width: 30rem;
   margin: auto;
   font-weight: 200;
-  line-height: 1.6;
 }
 
 .product .row {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5rem;
+  margin-top: 2rem;
   justify-content: center;
 }
 
 .product .row .product-card {
   text-align: center;
-  padding: 2rem 0.2rem;
+  padding: 1rem 1rem;
+  padding-bottom: 1.5rem;
   border: 0.2rem solid #cccccc; /* Warna bingkai */
   border-radius: 10px; /* Membuat sudut bingkai melengkung */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan bayangan di sekitar bingkai */
@@ -188,31 +189,36 @@ body {
 }
 
 .product .row .product-card img {
-  border-radius: 10%;
-  width: 85%;
+  border-radius: 10px;
+  width: 228px;
+  height: 228px;
 }
 
 .product .row .product-card .product-card-title {
-  margin: 2rem auto;
+  margin: 0.7rem auto;
+  font-size: 1rem;
 }
 
 .product .row .product-card .product-card-price {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   margin-bottom: 1rem;
 }
 
-.product .row .product-card .btn-pesan {
+.product .row .product-card .product-icon .btn-pesan,
+.product .row .product-card .product-icon .detail-btn {
   text-decoration: none;
-  background-color: #5ac05a;
+  background-color: grey;
   color: white;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 20px;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.product .row .product-card .btn-pesan:hover {
-  color: black !important;
+.product .row .product-card .product-icon .btn-pesan:hover,
+.product .row .product-card .product-icon .detail-btn:hover {
+  color: #11ee11 !important;
 }
 /* product section end */
 
@@ -225,7 +231,8 @@ body {
 
 .about h2,
 .product h2,
-.contact h2 {
+.contact h2,
+.client h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
@@ -234,7 +241,8 @@ body {
 
 .about h2 span,
 .product h2 span,
-.contact h2 span {
+.contact h2 span,
+.client h2 span {
   color: #5ac05a;
 }
 
@@ -296,6 +304,10 @@ body {
 }
 
 /* contact section */
+.contact .row {
+  margin-bottom: 8rem;
+}
+
 .contact .row .contact-content2 i {
   background-color: #33383b;
   color: white;
@@ -342,6 +354,48 @@ body {
   text-align: justify;
 }
 
+/* client start */
+
+.swiper-container {
+  width: 120rem;
+  max-width: 100%; /* Maksimal lebar slider */
+  overflow: hidden;
+
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 23rem; /* Tinggi slider tetap */
+  position: relative;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto; /* Sesuaikan dengan lebar slide */
+  height: auto; /* Sesuaikan dengan tinggi slide */
+  object-fit: contain; /* Pastikan gambar tetap proporsional */
+  display: block;
+  margin: auto;
+  padding: 10px;
+  border-radius: 8px; /* Opsional: Membulatkan sudut gambar */
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+/* client end */
+
 /* button whatapp start */
 .wa_btn {
   position: fixed;
@@ -356,6 +410,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease-in-out;
+  z-index: 99999;
 }
 
 .wa_btn i {
@@ -497,7 +552,7 @@ footer {
   font-weight: 200;
   font-size: 1.5rem;
   margin: 0;
-  text-align: justify;
+  text-align: left;
 }
 
 .footer-distribute .footer-center div p span {
@@ -505,7 +560,7 @@ footer {
   font-weight: normal;
   font-size: 1rem;
   line-height: 2;
-  text-align: justify;
+  text-align: left;
   width: 20rem;
   color: #8f9296;
 }
@@ -558,6 +613,115 @@ footer {
   transition: transform 0.3s ease-in-out;
 }
 
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  align-items: center;
+  justify-content: center;
+}
+
+.modal .modal-container {
+  position: relative;
+  background-color: #fefefe;
+  color: black;
+  margin: 15% auto;
+  padding: 1.2rem;
+  border: 1px solid #666;
+  width: fit-content;
+  height: fit-content;
+  animation: animateModal 0.5s;
+  border-radius: 20px;
+}
+
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal .modal-container .modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+  border-radius: 10px;
+}
+
+.modal .modal-container .modal-content img {
+  height: 25rem;
+  margin-right: 2rem;
+  border-radius: 10px;
+}
+
+.modal .modal-container .modal-content h3 {
+  margin: 1rem 0 10px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.modal .modal-container .modal-content p {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: 0.3rem;
+}
+
+.modal .modal-container .modal-content #modal-price {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.modal .modal-container .modal-content .modal-product-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal .modal-container .modal-content .close {
+  color: #aaa;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal .modal-container .modal-content .close:hover,
+.modal .modal-container .modal-content .close:focus {
+  color: black;
+}
+
+.modal .modal-container .modal-content .modal-product-content .btn-pesan {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #5ac05a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  /* cursor: pointer; */
+  transition: background-color 0.3s;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.modal .modal-container .modal-content .modal-product-content .btn-pesan:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.02);
+}
+
 /* media queries */
 
 /* laptop */
@@ -568,6 +732,18 @@ footer {
 
   footer {
     position: static;
+  }
+}
+
+@media (max-width: 1366px) {
+  .swiper-container {
+    width: 90%;
+    height: 90%;
+  }
+
+  .swiper-slide img {
+    width: 90%;
+    height: 90%;
   }
 }
 
@@ -651,6 +827,26 @@ footer {
     font-size: 1.5rem;
   }
 
+  /* client start */
+  .swiper-container {
+    width: 80%; /* Kurangi lebar slider di perangkat kecil */
+    height: 80%;
+  }
+
+  .swiper-slide {
+    height: 15rem; /* Kurangi tinggi */
+  }
+
+  .swiper-slide img {
+    width: 80%; /* Kurangi lebar slider di perangkat kecil */
+    height: 80%;
+  }
+
+  .caption {
+    font-size: 0.8rem;
+  }
+  /* client end */
+
   /* whatapp button start */
   .wa_btn {
     background-color: transparent;
@@ -677,6 +873,25 @@ footer {
   }
 
   /* footer responsive end*/
+
+  /* modal box */
+  .modal .modal-container {
+    width: fit-content;
+  }
+  .modal .modal-container .modal-content {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal .modal-container .modal-content img {
+    height: 35rem;
+  }
+
+  .modal .modal-container .modal-content .modal-product-content {
+    align-items: center;
+  }
 }
 
 /* mobile */

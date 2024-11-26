@@ -7,21 +7,27 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+
     <!-- icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- style -->
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- navbar start -->
     <nav class="navbar">
       <a href="" class="navbar-logo"
-        ><img class="logo" src="./assets/img/logo_nama.png" alt=""
+        ><img class="logo" src="assets/img/logo_nama.png" alt=""
       /></a>
       <div class="navbar-nav">
         <a href="#">Home</a>
@@ -56,216 +62,272 @@
     <section id="product" class="product">
       <h2><span>Produk</span> Kami</h2>
       <p>Berikut adalah layanan produk kami.</p>
-
       <div class="row">
         <div class="product-card">
           <img src="assets/img/1.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Spanduk -</h3>
+          <h3 class="product-card-title">- Spanduk -</h3>
           <p class="product-card-price">IDR 25K/Meter</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="1">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/2.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Album Kenangan -</h3>
+          <h3 class="product-card-title">- Album Kenangan -</h3>
           <p class="product-card-price">IDR 85K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="2">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/3.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Map Folder -</h3>
+          <h3 class="product-card-title">- Map Folder -</h3>
           <p class="product-card-price">IDR 3K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="3">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/4.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Map Raport -</h3>
+          <h3 class="product-card-title">- Map Raport -</h3>
           <p class="product-card-price">IDR 16,5K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="4">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/5.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Brosur/Flyer -</h3>
+          <h3 class="product-card-title">- Brosur/Flyer -</h3>
           <p class="product-card-price">Mulai dari IDR 250K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="5">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/6.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Brosur Sekolah -</h3>
+          <h3 class="product-card-title">- Brosur Sekolah -</h3>
           <p class="product-card-price">IDR 300K/Ream</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="6">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/7.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Stiker Logo -</h3>
+          <h3 class="product-card-title">- Stiker Logo -</h3>
           <p class="product-card-price">IDR 13K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="7">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/8.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Goodiebag -</h3>
+          <h3 class="product-card-title">- Goodiebag -</h3>
           <p class="product-card-price">Mulai dari IDR 7,5K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="8">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/9.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Carbonless Form -</h3>
+          <h3 class="product-card-title">- Carbonless Form -</h3>
           <p class="product-card-price">IDR 350K/Ream</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="9">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/10.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Cetak Kalender -</h3>
+          <h3 class="product-card-title">- Cetak Kalender -</h3>
           <p class="product-card-price">Mulai dari IDR 1K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="10">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/11.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Kop Surat -</h3>
+          <h3 class="product-card-title">- Kop Surat -</h3>
           <p class="product-card-price">Mulai dari IDR 135K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="11">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/12.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Payung Lipat Promosi Premium -</h3>
+          <h3 class="product-card-title">- Payung Lipat Promosi Premium -</h3>
           <p class="product-card-price">Mulai dari IDR 65K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="12">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/13.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Lanyard -</h3>
+          <h3 class="product-card-title">- Lanyard -</h3>
           <p class="product-card-price">Mulai dari IDR 12K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="13">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/14.jpg" alt="" class="product-card-img" />
-          <h3 class="proct-card-title">- Notes & Pulpen -</h3>
+          <h3 class="product-card-title">- Notes & Pulpen -</h3>
           <p class="product-card-price">Mulai dari IDR 18K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="14">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/15.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Mug Premium Sablon -</h3>
+          <h3 class="product-card-title">- Mug Premium Sablon -</h3>
           <p class="product-card-price">Mulai dari IDR 20K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="15">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/16.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Tumbler-</h3>
+          <h3 class="product-card-title">- Tumbler -</h3>
           <p class="product-card-price">Mulai dari IDR 65K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="16">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/17.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Cetak Undangan -</h3>
+          <h3 class="product-card-title">- Cetak Undangan -</h3>
           <p class="product-card-price">IDR 4K/Pcs</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="17">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/18.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Buku Kegiatan Ramadhan -</h3>
+          <h3 class="product-card-title">- Buku Kegiatan Ramadhan -</h3>
           <p class="product-card-price">IDR 4,95K</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="18">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
         <div class="product-card">
           <img src="assets/img/19.jpg" alt="" class="product-card-img" />
-          <h3 class="procut-card-title">- Huruf Timbul -</h3>
+          <h3 class="product-card-title">- Huruf Timbul -</h3>
           <p class="product-card-price">Mulai dari IDR 8K/Cm</p>
-          <a
-            class="btn-pesan"
-            href="https://wa.me/6281908191100"
-            target="_blank"
-            >Pesan</a
-          >
+          <div class="product-icon">
+            <a class="detail-btn" data-product="19">Detail</a>
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -378,6 +440,73 @@
     </section>
     <!-- contact section end -->
 
+    <!-- clien start -->
+    <!-- Swiper Slider -->
+    <section id="client" class="client">
+      <h2><span>Klien</span> Kami</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img src="assets/img/client6.jpg" alt="BKD Kota Depok" />
+            <div class="caption">BKD Kota Depok</div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img
+              src="assets/img/client7.png"
+              alt="Universitas Saintek Muhammadiyah"
+            />
+            <div class="caption">Universitas Saintek Muhammadiyah</div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img src="assets/img/client1.jpg" alt="Purela by Reglow" />
+            <div class="caption">Purela by Reglow</div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <img src="assets/img/client2.jpg" alt="Global Islamic Lab School" />
+            <div class="caption">Global Islamic Lab School</div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <img
+              src="assets/img/client3.png"
+              alt="Kementerian Pendidikan dan Kebudayaan"
+            />
+            <div class="caption">Kementerian Pendidikan dan Kebudayaan</div>
+          </div>
+          <!-- Slide 6 -->
+          <div class="swiper-slide">
+            <img src="assets/img/client4.jpg" alt="Namanya Rasa" />
+            <div class="caption">Namanya Rasa</div>
+          </div>
+          <!-- Slide 7 -->
+          <div class="swiper-slide">
+            <img src="assets/img/client5.jpg" alt="wpCitra" />
+            <div class="caption">wpCitra</div>
+          </div>
+          <!-- Slide 8 -->
+          <div class="swiper-slide">
+            <img src="assets/img/client8.png" alt="Universitas Indonesia Fakultas Ilmu Komputer" />
+            <div class="caption">Universitas Indonesia Fakultas Ilmu Komputer</div>
+          </div>
+          <!-- Slide 9 -->
+          <div class="swiper-slide">
+            <img src="assets/img/client9.png" alt="Kementerian Pertanian Indonesia
+            " />
+            <div class="caption">Kementerian Pertanian Indonesia
+            </div>
+          </div>
+          <!-- Slide 10 -->
+          <div class="swiper-slide">
+            <img src="assets/img/client10.png" alt="Kementerian Perhubungan Indonesia" />
+            <div class="caption">Kementerian Perhubungan Indonesia</div>
+          </div>
+    </section>
+    <!-- clien end -->
+
     <!-- button whatapp start -->
     <a class="wa_btn" href="https://wa.me/6281908191100" target="_blank"
       ><i class="ph ph-whatsapp-logo"></i><span>Chat Now</span></a
@@ -455,6 +584,46 @@
     </footer>
     <!-- footer end -->
 
+    <!-- modal box item detail start -->
+    <div id="modal" class="modal">
+      <div class="modal-container">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <img id="modal-img" src="" alt="Produk" />
+          <div class="modal-product-content">
+            <h3 id="modal-title">Nama Produk</h3>
+            <p id="spesifikasi-title">Spesifikasi produk.</p>
+            <p id="content-decs1">Deskripsi produk.</p>
+            <p id="content-decs2">Deskripsi produk.</p>
+            <p id="content-decs3">Deskripsi produk.</p>
+            <p id="content-decs4">Deskripsi produk.</p>
+            <p id="content-decs5">Deskripsi produk.</p>
+            <p id="content-decs6">Deskripsi produk.</p>
+            <p id="keterangan-title">Keterangan produk.</p>
+            <p id="content-ket1">Deskripsi produk.</p>
+            <p id="content-ket2">Deskripsi produk.</p>
+            <p id="content-ket3">Deskripsi produk.</p>
+            <p id="content-ket4">Deskripsi produk.</p>
+            <p id="content-ket5">Deskripsi produk.</p>
+            <p id="content-ket6">Deskripsi produk.</p>
+
+            <p id="modal-price">Harga:</p>
+
+            <a
+              class="btn-pesan"
+              href="https://wa.me/6281908191100"
+              target="_blank"
+              >Pesan</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal box item detail end -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- icons -->
     <script>
       feather.replace();
