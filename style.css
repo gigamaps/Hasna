@@ -356,17 +356,16 @@ body {
 
 /* client start */
 
-.swiper-container {
+.client .swiper-container {
   width: 120rem;
   max-width: 100%; /* Maksimal lebar slider */
   overflow: hidden;
-
   align-items: center;
   text-align: center;
   margin: 0 auto;
 }
 
-.swiper-slide {
+.client .swiper-container .swiper-wrapper .swiper-slide {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -376,7 +375,7 @@ body {
   position: relative;
 }
 
-.swiper-slide img {
+.client .swiper-container .swiper-wrapper .swiper-slide img {
   max-width: 100%;
   max-height: 100%;
   width: auto; /* Sesuaikan dengan lebar slide */
@@ -388,11 +387,13 @@ body {
   border-radius: 8px; /* Opsional: Membulatkan sudut gambar */
 }
 
-.caption {
+.client .swiper-container .swiper-wrapper .swiper-slide .caption {
   margin-top: 10px;
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
+  line-height: 1.5;
+  min-height: 3em;
 }
 /* client end */
 
@@ -736,12 +737,12 @@ footer {
 }
 
 @media (max-width: 1366px) {
-  .swiper-container {
+  .client .swiper-container {
     width: 90%;
     height: 90%;
   }
 
-  .swiper-slide img {
+  .client .swiper-container .swiper-wrapper .swiper-slide img {
     width: 90%;
     height: 90%;
   }
@@ -828,21 +829,21 @@ footer {
   }
 
   /* client start */
-  .swiper-container {
+  .client .swiper-container {
     width: 80%; /* Kurangi lebar slider di perangkat kecil */
     height: 80%;
   }
 
-  .swiper-slide {
+  .client .swiper-container .swiper-wrapper .swiper-slide {
     height: 15rem; /* Kurangi tinggi */
   }
 
-  .swiper-slide img {
+  .client .swiper-container .swiper-wrapper .swiper-slide img {
     width: 80%; /* Kurangi lebar slider di perangkat kecil */
     height: 80%;
   }
 
-  .caption {
+  .client .swiper-container .swiper-wrapper .swiper-slide .caption {
     font-size: 0.8rem;
   }
   /* client end */
